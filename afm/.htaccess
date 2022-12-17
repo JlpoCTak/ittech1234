@@ -1,0 +1,8 @@
+AddDefaultCharset UTF-8
+
+Options -Indexes
+
+AuthType Basic
+AuthName "Private zone"
+AuthUserFile  F:/OSPanel/domains/itech1234/.htpasswd
+require valid-user
