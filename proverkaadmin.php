@@ -26,7 +26,7 @@ if ($pas == 'admin' and $login == "admin") {
     $_SESSION['admin'] = true;
     $script = 'sotrudniki.php';
 }else{
-    $script = 'login.php';
+    $script = 'loginadmin.php';
 }
 
 

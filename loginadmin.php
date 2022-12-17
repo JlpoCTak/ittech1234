@@ -1,4 +1,3 @@
-
 <?php
   $mysqli = @new mysqli('localhost', 'root', '', 'ittech123');
 if (mysqli_connect_errno()) {
@@ -24,11 +23,12 @@ if (mysqli_connect_errno()) {
 				SATAIRU
 			</h2>
 		</div>
-		<form method ="GETqqqq" action="proverkaadmin.php" class="mid_window">
+		<form method ="GET" action="proverkaadmin.php" class="mid_window">
 			<p class="main_nadpis">Вход в личный кабинет</p>
 			<input  type="login" name="login" class="input_log" placeholder="Введите почту" value="">
 			<input type="password" name="password" class="input_pas" placeholder="Введите пароль" value="">
-			<input type="submit" class="licab_log" value="Вход">	
+			<input type="submit" class="licab_log" value="Войти">	
+			<input type="button" onclick="window.location.href ='loginsotrudnik.php' " value="log sotrudnik"/>
         </form>
 		<div class ="footer"></div>
 		</div>
