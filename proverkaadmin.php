@@ -21,7 +21,7 @@ $rezpas = mysqli_fetch_assoc($result_pass);
 $row_pass = mysqli_num_rows($result_pass);
 $passrok = $rezpas['password'];
 
-if (($row_email > 0) and ($row_pass > 0)) {
+/*if (($row_email > 0) and ($row_pass > 0)) {
     if ($login == $emailrok and $pas == $passrok) {
         session_start();
         $_SESSION['admin'] = true;
@@ -29,17 +29,16 @@ if (($row_email > 0) and ($row_pass > 0)) {
     } else {
         echo "da";
     }
-  
-}
+}*/
 
 
-/*if (($login == "admin") and ($pas =="admin")) {
+if (($login == "admin") and ($pas =="admin")) {
     session_start();
     $_SESSION['admin'] = true;
     $script = 'sotrudniki.php';
 } else {
-    $script ='smenapassword.php';
-}*/
+    $script ='loginadmin.php';
+}
 
 
 header("Location: $script");
