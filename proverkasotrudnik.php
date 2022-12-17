@@ -14,7 +14,7 @@ $query_email = "SELECT `email` FROM `sotrudniki` WHERE `email`='$login'";
 $result_email = mysqli_query($mysqli, $query_email);
 $rezemail = mysqli_fetch_assoc($result_email);
 $row_email = mysqli_num_rows($result_email);
-$emailrok = $rezrmail['email'];
+$emailrok = $rezemail['email'];
 
 $query_pass = "SELECT `password` FROM `sotrudniki` WHERE `email`='$login'";
 $result_pass = mysqli_query($mysqli, $query_pass);
@@ -23,16 +23,14 @@ $row_pass = mysqli_num_rows($result_pass);
 $passrok = $rezpas['password'];
 
 if (($row_email > 0) and ($row_pass > 0)) {
-    /*if ($login == $emailrok and $pas == $passrok) {
+    if ($login == $emailrok and $pas == $passrok) {
         session_start();
         $_SESSION['login'] = $login;
         $script = 'profile.php';
     }else{
         $script = 'loginsotrudnik.php';
-    }*/
-    echo "da";
-    echo $passrok;
-    echo $emailrok;
+    }
+   
     
 }
 
