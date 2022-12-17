@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -75,10 +77,24 @@
              </h2>
          </div>
          <div class="fon_of_tovar">
+         <form action='profile.php' target="_blank">
+            <button>Переход на главную </button>
+        </form>
              <div>
                  <button class="button" onclick="document.location ='donwload'">открыть католог </button>
              </div>
-         </div>
+             <?php
+             if (! $_SESSION['admin']){
+                 echo "<form action='sotrudniki.php' target='_blank'>
+            <button>Сотрудники</button>
+                </form>";
+             }
+             
+             
+             
+             
+             ?>
+        </div>
          
          <div class="footer"></div>
      </div>

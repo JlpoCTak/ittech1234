@@ -49,7 +49,9 @@ session_start();
 </style>
 </head>
 <body>
-
+<form action='main.php' target="_blank">
+        <button>Переход на главную </button>
+    </form>
 <h2 style="text-align:center">User Profile Card</h2>
 
 <div class="card">

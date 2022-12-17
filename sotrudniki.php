@@ -6,8 +6,8 @@ if (mysqli_connect_errno()) {
 
 header('Content-type: text/html; charset=utf-8');
 session_start();
-if (! $_SESSION['admin'] == true)
-header('Location: sotrudniki.php');
+if (! $_SESSION['admin'])
+header('Location: proverkaadmin.php');
 
 ?>
 
@@ -30,6 +30,9 @@ header('Location: sotrudniki.php');
 		</div>
 		<div class="fon_of_tovar">
 			<h1>Данные сотрудников</h1>
+			<form action='main.php' target="_blank">
+            <button>Переход на главную </button>
+        </form>
 
 			<table>
 				<thead>

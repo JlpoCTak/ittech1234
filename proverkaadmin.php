@@ -5,6 +5,8 @@ if (mysqli_connect_errno()) {
     echo "Подключение невозможно: ".mysqli_connect_error();}
 
 
+
+    
 $login = $_GET['login'];
 $pas = $_GET['password'];
 
