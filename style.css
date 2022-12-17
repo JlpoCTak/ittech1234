@@ -74,8 +74,8 @@
 }
 .mid_window {
 	position: absolute;
-	width: 500px;
-	height: 390px;
+	width: 580px;
+	height: 400px;
 	top: 0;
     right: 0;
     bottom: 0;
@@ -285,4 +285,10 @@ body {
 	text-decoration: none;
 	font-size: 22px;
 	color: black;
+  }
+  .logining_as{
+	width: 40%;
+	height: 10px;
+	position: relative;
+	left: 20%;
   }

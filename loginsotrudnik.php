@@ -20,17 +20,30 @@ if (mysqli_connect_errno()) {
 	
 		<div class="header">
 			<h2 class="title">
-				SATAIRU
-			</h2>
+
 		</div>
 		<form method ="GET" action="proverkasotrudnik.php" class="mid_window">
 			<p class="main_nadpis">Вход в личный кабинет</p>
 			<input  type="login" name="login" class="input_log" placeholder="Введите почту" value="">
 			<input type="password" name="password" class="input_pas" placeholder="Введите пароль" value="">
 			<input type="submit" class="licab_log" value="Войти">
-         <input type="button" onclick="window.location.href ='loginadmin.php' " value="log admin"/>	
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+        <input type="button" onclick="window.location.href ='loginadmin.php' " value="Войти как Админ"/>	
         </form>
-		<div class ="footer"></div>
+		<div class ="footer">
+		</div>
 		</div>
 		</div>
 </body>

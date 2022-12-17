@@ -1,4 +1,6 @@
 <?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+use LDAP\Result;
 $mysqli = new mysqli('localhost', 'root', '', 'ittech123');
 
 if (mysqli_connect_errno()) {
@@ -8,9 +10,15 @@ if (mysqli_connect_errno()) {
 $login = $_GET['login'];
 $pas = $_GET['password'];
 
-
-
-if ($login == 'ivanov@gmail.com' and $pas == "1234") {
+$query = "SELECT `email` FROM `sotrudniki` WHERE `email`='$login'";
+$result = mysqli_query($mysqli, $query);
+$row = mysqli_num_rows($result);
+if ($row > 0) {
+    echo "da";
+} else {
+    echo "no";
+}
+if ($login == '' and $pas == "") {
     session_start();
     $_SESSION['login'] = $login;
     $script = 'profile.php';

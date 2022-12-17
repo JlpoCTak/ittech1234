@@ -1,6 +1,6 @@
 <?php
-
-  $mysqli = @new mysqli('localhost', 'root', '', 'ittech123');
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+  $mysqli = new mysqli('localhost', 'root', '', 'ittech123');
 if (mysqli_connect_errno()) {
 	echo "Подключение невозможно: ".mysqli_connect_error();
 }
@@ -53,10 +53,11 @@ session_start();
   
   <?php
   $email= $_SESSION['login'];
-  $result = $mysqli->query("SELECT `fio`,`otdel`,`birthday`,`lvldostup
-` FROM `sotrudniki` WHERE `email`=$email");
-    while ($row = mysqli_fetch_array($result)); 
-  {
+  $query = "SELECT `fio`,`otdel`,`birthday`,`lvldostup` FROM `sotrudniki` WHERE `email`='$email'";
+
+  $result = $mysqli->query($query);
+  
+  foreach($result as $row){
       $fio =$row['fio'];
       $otdel = $row['otdel'];
       $birthday = $row['birthday'];
@@ -68,8 +69,7 @@ session_start();
       <h1>".$lvldostup."</h1>";
   }
   ?>
-  
- <p><button class="button_card">tik</button></p>
+<p><input type="button" class="button_card" onclick="window.location.href ='smenapassword.php'" value="Сменить пароль"></p>
 </div>
 
 </body>
