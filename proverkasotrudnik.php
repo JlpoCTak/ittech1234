@@ -10,22 +10,31 @@ if (mysqli_connect_errno()) {
 $login = $_GET['login'];
 $pas = $_GET['password'];
 
-$query = "SELECT `email` FROM `sotrudniki` WHERE `email`='$login'";
-$result = mysqli_query($mysqli, $query);
-$row = mysqli_num_rows($result);
-if ($row > 0) {
-    echo "da";
-} else {
-    echo "no";
-}
-if ($login == '' and $pas == "") {
-    session_start();
-    $_SESSION['login'] = $login;
-    $script = 'profile.php';
-}else{
-    $script = 'loginsotrudnik.php';
-}
+$query_email = "SELECT `email` FROM `sotrudniki` WHERE `email`='$login'";
+$result_email = mysqli_query($mysqli, $query_email);
+$rezemail = mysqli_fetch_assoc($result_email);
+$row_email = mysqli_num_rows($result_email);
+$emailrok = $rezrmail['email'];
 
+$query_pass = "SELECT `password` FROM `sotrudniki` WHERE `email`='$login'";
+$result_pass = mysqli_query($mysqli, $query_pass);
+$rezpas = mysqli_fetch_assoc($result_pass);
+$row_pass = mysqli_num_rows($result_pass);
+$passrok = $rezpas['password'];
+
+if (($row_email > 0) and ($row_pass > 0)) {
+    /*if ($login == $emailrok and $pas == $passrok) {
+        session_start();
+        $_SESSION['login'] = $login;
+        $script = 'profile.php';
+    }else{
+        $script = 'loginsotrudnik.php';
+    }*/
+    echo "da";
+    echo $passrok;
+    echo $emailrok;
+    
+}
 
 header("Location: $script");
 ?>

@@ -41,7 +41,7 @@ session_start();
             $query = "SELECT `password` FROM `sotrudniki` WHERE `email`='$email'";
             $result = mysqli_query($mysqli, $query);
             $row = mysqli_fetch_assoc($result);
-        $name = $row['password'];
+            $name = $row['password'];
             if($old_pas == $name){
             $query = "UPDATE `sotrudniki` SET `password`='$new_pas' WHERE `email`='$email'";
                 mysqli_query($mysqli,$query);
