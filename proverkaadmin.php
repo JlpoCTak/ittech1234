@@ -9,18 +9,26 @@ $login = $_GET['login'];
 $pas = $_GET['password'];
 
 
-$result_login = $mysqli->query("SELECT `login` FROM `admin` WHERE `login`= $login");
-if ($result->num_rows == 1) {
+/*$result_login = $mysqli->query("SELECT `login` FROM `admin` WHERE `login`= $login");
+if ($result->num_rows == 1 ) {
     $result_password = $mysqli->query("SELECT `password` FROM `admin` WHERE `login`= $login");
-    if ($pas == $result_password){
+    if ($pas == $result_password) {
         session_start();
         $_SESSION['admin'] = true;
         $script = 'sotrudniki.php';
 
-    }else{
-        $script == 'login.php';}
+    } else {
+        $script = 'login.php';
+    }
+}*/
+if ($pas == 'admin' and $login == "admin") {
+    session_start();
+    $_SESSION['admin'] = true;
+    $script = 'sotrudniki.php';
+}else{
+    $script = 'login.php';
+}
+
 
 header("Location: $script");
-    }
-
-    ?>
+?>

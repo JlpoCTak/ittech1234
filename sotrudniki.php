@@ -4,10 +4,10 @@ $mysqli = new mysqli('localhost', 'root', '', 'ittech123');
 if (mysqli_connect_errno()) {
     echo "Подключение невозможно: ".mysqli_connect_error();}
 
-/*header('Content-type: text/html; charset=utf-8');
+header('Content-type: text/html; charset=utf-8');
 session_start();
 if (! $_SESSION['admin'])
-header('Location: adminavt.php');*/
+header('Location: proverkaadmin.php');
 ?>
 
 <!DOCTYPE html>
