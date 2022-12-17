@@ -29,9 +29,7 @@ if (($row_email > 0) and ($row_pass > 0)) {
         $script = 'profile.php';
     }else{
         $script = 'loginsotrudnik.php';
-    }
-   
-    
+    }   
 }
 
 header("Location: $script");

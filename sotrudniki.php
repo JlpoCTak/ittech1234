@@ -6,8 +6,9 @@ if (mysqli_connect_errno()) {
 
 header('Content-type: text/html; charset=utf-8');
 session_start();
-if (! $_SESSION['admin'])
-header('Location: proverkaadmin.php');
+if (! $_SESSION['admin'] == true)
+header('Location: sotrudniki.php');
+
 ?>
 
 <!DOCTYPE html>

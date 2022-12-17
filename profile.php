@@ -6,12 +6,15 @@ if (mysqli_connect_errno()) {
 }
 session_start();
 ?>
-<html>
+<link rel="stylesheet" href="style.css" />
+<body class="body_korzina">
+
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css" />
 <style>
 .card {
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
@@ -42,7 +45,7 @@ session_start();
   font-size: 22px;
   color: black;
 }
-
+ 
 </style>
 </head>
 <body>
