@@ -84,7 +84,7 @@ session_start();
                  <button class="button" onclick="document.location ='donwload'">открыть католог </button>
              </div>
              <?php
-             if (! $_SESSION['admin']){
+             if ($_SESSION['admin']){
                  echo "<form action='sotrudniki.php' target='_blank'>
             <button>Сотрудники</button>
                 </form>";
