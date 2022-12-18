@@ -23,8 +23,7 @@ if (mysqli_connect_errno()) {
 		</div>
 		<form method ="GET" action="proverkaadmin.php" class="mid_window">
 			<p class="main_nadpis">Вход в личный кабинет</p>
-			<input  type="login" name="login" class="input_log" placeholder="Введите логин
-			" value="">
+			<input  type="login" name="login" class="input_log" placeholder="Введите логин" value="">
 			<input type="password" name="password" class="input_pas" placeholder="Введите пароль" value="">
 			<input type="submit" class="licab_log" value="Войти">	
 			</br>
