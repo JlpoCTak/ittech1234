@@ -3,7 +3,7 @@ $config = array
 
 (
 
-  'rootdirectory'         => $_SERVER['DOCUMENT_ROOT'],"/donwload" ,   // site root directory
+  'rootdirectory'         => $_SERVER['DOCUMENT_ROOT']. "/download" ,   // site root directory
 
   'language'              => 'ru',                         // en, ru - file name + '.lng' in folder 'language' 
 

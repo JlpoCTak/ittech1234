@@ -81,7 +81,7 @@ session_start();
             <button>Переход на главную </button>
         </form>
              <div>
-                 <button class="button" onclick="document.location ='donwload'">открыть католог </button>
+                 <button class="button" onclick="document.location ='afm'">открыть католог </button>
              </div>
              <?php
              if ($_SESSION['admin']){
