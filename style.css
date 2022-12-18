@@ -10,6 +10,7 @@
 	font-style: normal;
 	font-weight: normal;
 }
+
 .body_log_reg {
     background: url(fon_small.png) no-repeat;
     background-size: cover; 
@@ -286,9 +287,15 @@ body {
 	font-size: 22px;
 	color: black;
   }
-  .logining_as{
-	width: 40%;
-	height: 10px;
-	position: relative;
-	left: 20%;
+  a.logining_as{
+	display: inline-block;
+	background: #2196f3;
+	color: #fff;
+	padding: 12px;
+	border-radius: 3px;
+	text-decoration: none;
+	font-family: Tahoma;
+	font-size: 18px;
+	line-height: 1px;
+	font-weight: 100px;
   }

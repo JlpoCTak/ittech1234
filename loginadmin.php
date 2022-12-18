@@ -6,13 +6,14 @@ if (mysqli_connect_errno()) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+	<link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<link rel="stylesheet" href="style.css" />
+	
 </head>
 <body class="body_log_reg">
 	<div class="parent">
@@ -26,21 +27,10 @@ if (mysqli_connect_errno()) {
 			<input  type="login" name="login" class="input_log" placeholder="Введите почту" value="">
 			<input type="password" name="password" class="input_pas" placeholder="Введите пароль" value="">
 			<input type="submit" class="licab_log" value="Войти">	
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			<input class="logining_as" type="button" onclick="window.location.href ='loginsotrudnik.php' " value="Войти как сотрудник"/>
+			
+			<a class="logining_as" href="loginsotrudnik.php">Войти как сотрудник"</a>
         </form>
+		
 		<div class ="footer"></div>
 		</div>
 		</div>

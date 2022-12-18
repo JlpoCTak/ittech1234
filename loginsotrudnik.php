@@ -27,20 +27,8 @@ if (mysqli_connect_errno()) {
 			<input  type="login" name="login" class="input_log" placeholder="Введите почту" value="">
 			<input type="password" name="password" class="input_pas" placeholder="Введите пароль" value="">
 			<input type="submit" class="licab_log" value="Войти">
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-        <input type="button" onclick="window.location.href ='loginadmin.php' " value="Войти как Админ"/>	
+
+			<a class="logining_as" href="loginadmin.php">Войти как админ"</a>	
         </form>
 		<div class ="footer">
 		</div>
